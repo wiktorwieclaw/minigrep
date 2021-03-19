@@ -17,11 +17,11 @@ Config::Config(int argc, char* argv[]) {
     this->query = argv[2];
 };
 
-auto Config::get_filename() -> std::string_view {
+auto Config::get_filename() const -> std::string_view {
     return this->filename;
 }
 
-auto Config::get_query() -> std::string_view {
+auto Config::get_query() const -> std::string_view {
     return this->query;
 }
 
