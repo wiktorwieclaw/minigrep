@@ -10,14 +10,14 @@
 using namespace testing;
 
 TEST(StrProcessing, ShallSplit) {
-  std::string str = "a\nbb\nccc\n";
+  std::string_view str = "a\nbb\nccc\n";
   auto result = str_processing::split(str, '\n');
 
   ASSERT_THAT(result, ElementsAre("a", "bb", "ccc"));
 }
 
 TEST(StrProcessing, ShallFind) {
-  std::string str = "aaa\naaabbb\nbbb";
+  std::string_view str = "aaa\naaabbb\nbbb";
   auto result = str_processing::search(str, "bbb");
 
   ASSERT_THAT(result, ElementsAre("aaabbb", "bbb"));
