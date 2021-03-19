@@ -2,11 +2,11 @@
 // Created by vixu on 3/19/21.
 //
 
-#include "string_processing.h"
+#include "str_processing.h"
 
 #include <sstream>
 
-namespace string_processing {
+namespace str_processing {
 
 auto split(std::string_view str, char delimiter) -> std::vector<std::string> {
     std::vector<std::string> lines;
@@ -34,4 +34,4 @@ auto search(
     return lines;
 }
 
-} // namespace string_processing
+} // namespace str_processing

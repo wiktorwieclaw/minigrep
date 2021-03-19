@@ -2,7 +2,7 @@
 #include <iostream>
 
 #include "config.hpp"
-#include "string_processing.h"
+#include "str_processing.h"
 
 void run(const config::Config& config) {
     std::ifstream file;
@@ -17,7 +17,7 @@ void run(const config::Config& config) {
         std::istreambuf_iterator<char>()
     };
 
-    auto lines = string_processing::search(content, config.get_query());
+    auto lines = str_processing::search(content, config.get_query());
 
     for (auto& line : lines) {
         std::cout << line << std::endl;
