@@ -12,6 +12,7 @@ void run(const config::Config& config) {
         throw std::runtime_error("Cannot open file");
     }
 
+    // read file content to string
     std::string content{
         std::istreambuf_iterator<char>(file),
         std::istreambuf_iterator<char>()
